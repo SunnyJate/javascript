@@ -9,7 +9,7 @@
 fun1(); */
 
 //Lexical Function
-var a=3;
+/* var a=3;
 function fun(){
     let a = 5;
     console.log("this is function " + a)
@@ -21,4 +21,14 @@ function fun(){
     fun1(); //Here a is in lexical scope of function fun1. Bcz of the fun1 can access the 'a' variable. Its is similar as global veriable.
     //here a can be used through out whole function fun() and all subsunction offunction fun() can access the value of a.
 }
-fun(); 
+fun();  */
+
+//Debugger
+
+function fun(){
+    debugger;
+    for(let i=1; i<=5; i++){
+        console.log(i);
+    }
+}
+fun();
