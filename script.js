@@ -93,3 +93,27 @@ function fun(){
 }
 fun();//in this condition still the this keyword is work as window object. */
 
+//"new" key word
+//The new keyword is used to create an instance of a user-defined object type and a constructor function
+
+/* function fun(){
+    let fName = "Sunny";
+    this.fName = fName;
+}
+var obj = new fun();
+console.log(obj); */
+
+//constructor function
+//It named with capital letter only 
+//Should have execute only with "new" keyword
+
+/* function User(name){
+    if(!new.target){
+        return new User(name)
+    }//WE CAN USE THE NEW KEY WORD IN THIS FORM ALSO.
+    this.name = name;
+}
+//let person = new User("Sam");
+//we can write this keyword at this position 
+let person = User("Sam");//IF NEW NOT USE HERE THEN NEED TO ADD IF STATEMENT IN FUNCTION.
+console.log(person.name); */
