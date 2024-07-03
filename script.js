@@ -56,7 +56,7 @@ console.log(length); */
 //MAP
 
 //Map declaration
-var map1 = new Map([
+/* var map1 = new Map([
   [1, "Red"],
   ["Color", "Black"],
   ["Integers", [1, 2, 3, 4]],
@@ -74,4 +74,22 @@ for(var key of k){
 console.log("map2");
 var map2 = new Map();
 map2.set("fname","Mun");
-console.log(map2);
+console.log(map2); */
+
+//This key word
+//this keyword represent the object in which the values are present
+/* let obj={
+    fname : "Sunny",
+    age : "24",
+    fun :function(){
+        console.log(this.fname);
+    }
+}
+obj.fun();
+
+//console.log(this);//here this is play a role as window object
+function fun(){
+    console.log(this);
+}
+fun();//in this condition still the this keyword is work as window object. */
+
