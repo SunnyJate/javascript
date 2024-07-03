@@ -25,10 +25,53 @@ fun();  */
 
 //Debugger
 
-function fun(){
+/* function fun(){
     debugger;
     for(let i=1; i<=5; i++){
         console.log(i);
     }
 }
-fun();
+fun(); */
+
+//Sets
+
+ /* const arr=[10,20,30,40,50];
+ console.log(arr);
+ console.log(arr.length);//to find array length
+ const s = new Set([10,20,30,40,50]);//declare set
+ s.add(60);//element can add in set
+s.add(40);//set not allow duplicate element and not show error if we try to add duplicate
+s.add("Hello");//we can  add different data type elements in set as well as in array.
+ console.log(s);
+
+//to find length of set
+
+debugger;
+length = 0;
+for(let element of s){
+    length++;
+}
+console.log(length); */
+
+//MAP
+
+//Map declaration
+var map1 = new Map([
+  [1, "Red"],
+  ["Color", "Black"],
+  ["Integers", [1, 2, 3, 4]],
+]);
+console.log(map1);
+console.log(map1.get("Integers"));//to retrieve perticular value we use .get method and insert the key of the value which we want to retrieve.
+
+//how to retrieve keys
+let k=map1.keys();
+for(var key of k){
+    console.log(key);
+}
+
+//how to insert the element int map
+console.log("map2");
+var map2 = new Map();
+map2.set("fname","Mun");
+console.log(map2);
