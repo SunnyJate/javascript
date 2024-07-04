@@ -117,3 +117,55 @@ console.log(obj); */
 //we can write this keyword at this position 
 let person = User("Sam");//IF NEW NOT USE HERE THEN NEED TO ADD IF STATEMENT IN FUNCTION.
 console.log(person.name); */
+
+/* //Symbol
+//It is hidden property
+//if we print keys that time symbol is not show.
+let sys=Symbol("id");
+console.log(sys.toString());
+console.log(sys.description);
+
+//every symbol is unique
+let sys1= Symbol("id");
+console.log(sys == sys1);
+console.log(sys === sys1);
+
+let id = Symbol("id");
+let obj={
+    name:"sunny",
+    age:24
+    // [id]:1
+}
+obj[id]=1;
+console.log(obj);
+
+for(let key in obj){
+    console.log(key);
+} */
+
+//Recursion
+
+/* function recursive(n){
+    if(n<=10){
+        console.log(n)
+        recursive(n+1)
+    }
+}
+recursive(1); */
+
+// //factorial
+// function fact(n){
+//     if(n==0){
+//         return 1
+//     }
+//   /*   else{
+//         return n*fact(n-1)
+//     } */
+//     return n;
+// }
+// console.log(5*fact(5 - 1)*fact(4 - 1)*fact(3 - 1)*fact(2 - 1));
+
+//JS is Synchronous language.
+//it work simultaneously as first come first serve basis
+//It approach is tqp to down.
+
