@@ -168,4 +168,12 @@ recursive(1); */
 //JS is Synchronous language.
 //it work simultaneously as first come first serve basis
 //It approach is tqp to down.
-
+setTimeout(fun,1000);//we cam write this way or another below mentioned way.
+console.log("this");
+function fun(){
+    console.log("Asynchronous");
+}
+/* setTimeout(()=>{
+    console.log("Asynchronous");
+},10) *///settimeout is worked as asynchronous in the program. It means in the delay time other task is perform without waiting for that time to complete and after completing the delay the task is completed which is stop due to delay.
+console.log("is")
