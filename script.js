@@ -35,7 +35,7 @@ fun(); */
 
 //Sets
 
- /* const arr=[10,20,30,40,50];
+/* const arr=[10,20,30,40,50];
  console.log(arr);
  console.log(arr.length);//to find array length
  const s = new Set([10,20,30,40,50]);//declare set
@@ -104,7 +104,7 @@ var obj = new fun();
 console.log(obj); */
 
 //constructor function
-//It named with capital letter only 
+//It named with capital letter only
 //Should have execute only with "new" keyword
 
 /* function User(name){
@@ -168,12 +168,59 @@ recursive(1); */
 //JS is Synchronous language.
 //it work simultaneously as first come first serve basis
 //It approach is tqp to down.
-setTimeout(fun,1000);//we cam write this way or another below mentioned way.
-console.log("this");
-function fun(){
-    console.log("Asynchronous");
+// setTimeout(fun,1000);//we cam write this way or another below mentioned way.
+// console.log("this");
+// function fun(){
+//     console.log("Asynchronous");
+// }
+// /* setTimeout(()=>{
+//     console.log("Asynchronous");
+// },10) *///settimeout is worked as asynchronous in the program. It means in the delay time other task is perform without waiting for that time to complete and after completing the delay the task is completed which is stop due to delay.
+// console.log("is")
+
+//callback function
+/* debugger
+function fun(val){
+    console.log(val);
 }
-/* setTimeout(()=>{
-    console.log("Asynchronous");
-},10) *///settimeout is worked as asynchronous in the program. It means in the delay time other task is perform without waiting for that time to complete and after completing the delay the task is completed which is stop due to delay.
-console.log("is")
+function add(a,b,callback){
+    let sum = a+b;
+    callback(sum);
+}
+add(5,6,fun); */
+
+/* //Callback hell
+
+function loadingdata(callback) {
+  setTimeout(() => {
+    console.log("Loading Data");
+    callback();
+  }, 1000);
+}
+function collectingdata(callback) {
+  setTimeout(() => {
+    console.log("Collecting Data");
+    callback();
+    l;
+  }, 1000);
+}
+function approvingdata(callback) {
+  setTimeout(() => {
+    console.log("Approving Data");
+    callback();
+  }, 1000);
+}
+function approved() {
+  console.log("Approved");
+}
+
+//calling the function and making nested function is easy for less function but if the function are in lots of quantity then this process of calling function again and again is like a hell for the programmer.
+//Thats why this process is called
+//Callback hell
+loadingdata(function () {
+  collectingdata(function () {
+    approvingdata(function () {
+      approved();
+    });
+  });
+}); */
