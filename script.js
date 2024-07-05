@@ -224,3 +224,5 @@ loadingdata(function () {
     });
   });
 }); */
+
+//To overcome from the callback hell we need to write promise.`
