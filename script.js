@@ -226,3 +226,36 @@ loadingdata(function () {
 }); */
 
 //To overcome from the callback hell we need to write promise.`
+
+function loadingdata() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Loading Data");
+      resolve();
+    }, 1000);
+  });
+}
+function collectingdata() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Collecting Data");
+      reject("Error: Not Fullfilled");
+      l;
+    }, 1000);
+  });
+}
+function approvingdata() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Approving Data");
+      resolve();
+    }, 1000);
+  });
+}
+function approved() {
+  console.log("Approved");
+}
+
+loadingdata().then(collectingdata).then(approvingdata).then(approved).catch((err)=>{
+  console.log(err);
+})
