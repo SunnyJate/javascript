@@ -239,8 +239,7 @@ function collectingdata() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("Collecting Data");
-      reject("Error: Not Fullfilled");
-      l;
+      resolve();
     }, 1000);
   });
 }
@@ -248,7 +247,7 @@ function approvingdata() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("Approving Data");
-      resolve();
+      reject("Error: Not Fullfilled");
     }, 1000);
   });
 }
@@ -259,3 +258,8 @@ function approved() {
 loadingdata().then(collectingdata).then(approvingdata).then(approved).catch((err)=>{
   console.log(err);
 })
+
+
+//Asysc Await
+//this is better way of using promise for catching the errors
+
