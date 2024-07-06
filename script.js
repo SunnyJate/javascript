@@ -255,11 +255,20 @@ function approved() {
   console.log("Approved");
 }
 
-loadingdata().then(collectingdata).then(approvingdata).then(approved).catch((err)=>{
+/* loadingdata().then(collectingdata).then(approvingdata).then(approved).catch((err)=>{
   console.log(err);
-})
+}) */
 
 
 //Asysc Await
 //this is better way of using promise for catching the errors
 
+async function Ex(){
+  await loadingdata();
+  await collectingdata();
+  await approvingdata();
+  await approved();
+}
+Ex().catch((err)=>{
+  console.log(err)
+});
