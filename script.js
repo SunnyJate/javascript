@@ -298,9 +298,24 @@ var obj2 = {
 // var obj3={
 //   fName:"Manthan",
 // }
-// fun.call(obj1,24,"male"); //by using call here we do not need to writer function calling separately. we can call obj 2 through obj 1 by using call.
+// fun.call(obj1,24,"male"); //by using call here we do not need to writer function calling separately. we can call obj 2 through obj 1 by /. using call.
 
 // fun.apply(obj2,[18,"Male"]);//at time of using apply need to pass parameters in form of array.
 
-var d = fun.bind(obj2,[26,"Male"]);
-console.log(d)
+/* var d = fun.bind(obj2,[26,"Male"]);
+console.log(d) */
+
+// Property flags and descriptors
+
+let emp={};
+emp.name="Sunny";
+console.log(Object.getOwnPropertyDescriptor(emp,"name"))
+
+Object.defineProperty(emp,"age",
+{
+  value:24,
+  writable:true,//true == chan change value
+  configurable:true,// true == attribute can be deleted
+  enumerable:true//true== attribute can visible in string or array like places.
+});
+console.log(Object.getOwnPropertyDescriptor(emp,"age"));
