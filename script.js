@@ -353,6 +353,20 @@ Person.prototype.greet= function(){
 //let user = Person("Sunny",25)
 let user = new Person("Sunny",25)
 user.greet()
-console.log(user)
+console.log(user) */
 
-console.log(Person.prototype) */
+// console.log(Person.prototype)
+
+//Class
+class Person{
+  constructor(name,age){
+    this.name=name;
+    this.age=age;
+  }
+  greet(){
+    console.log( `Hello ${this.name}`)    
+  }
+}
+let user = new Person("Hari", 18)
+    user.greet()
+    console.log(user)
