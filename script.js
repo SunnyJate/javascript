@@ -259,7 +259,6 @@ function approved() {
   console.log(err);
 }) */
 
-
 //Asysc Await
 //this is better way of using promise for catching the errors
 
@@ -284,3 +283,24 @@ function fun(){
 setTimeout(()=>{
   clearInterval(inter)
 },10000) */
+
+//call bind apply
+
+function fun(age,gender) {//we can pass parameters in this also
+  console.log(this.fName,age,gender); //"this" is represent the object which in mention in call function.
+}
+var obj1 = {
+  fName: "Sunny",
+}
+var obj2 = {
+  fName: "Hari",
+}
+// var obj3={
+//   fName:"Manthan",
+// }
+// fun.call(obj1,24,"male"); //by using call here we do not need to writer function calling separately. we can call obj 2 through obj 1 by using call.
+
+// fun.apply(obj2,[18,"Male"]);//at time of using apply need to pass parameters in form of array.
+
+var d = fun.bind(obj2,[26,"Male"]);
+console.log(d)
