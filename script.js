@@ -226,7 +226,7 @@ loadingdata(function () {
 }); */
 
 //To overcome from the callback hell we need to write promise.`
-
+/* 
 function loadingdata() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -253,7 +253,7 @@ function approvingdata() {
 }
 function approved() {
   console.log("Approved");
-}
+} */
 
 /* loadingdata().then(collectingdata).then(approvingdata).then(approved).catch((err)=>{
   console.log(err);
@@ -263,7 +263,7 @@ function approved() {
 //Asysc Await
 //this is better way of using promise for catching the errors
 
-async function Ex(){
+/* async function Ex(){
   await loadingdata();
   await collectingdata();
   await approvingdata();
@@ -271,4 +271,16 @@ async function Ex(){
 }
 Ex().catch((err)=>{
   console.log(err)
-});
+}); */
+//we can use '.then' function also after Ex() but the function in ',then' will execute after all function
+
+//timeinterval
+
+/* var inter = setInterval(fun, 1000)
+function fun(){
+  let date = new Date().toLocaleTimeString();
+  console.log(date);
+}
+setTimeout(()=>{
+  clearInterval(inter)
+},10000) */
