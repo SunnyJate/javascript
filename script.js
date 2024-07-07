@@ -286,7 +286,7 @@ setTimeout(()=>{
 
 //call bind apply
 
-function fun(age,gender) {//we can pass parameters in this also
+/* function fun(age,gender) {//we can pass parameters in this also
   console.log(this.fName,age,gender); //"this" is represent the object which in mention in call function.
 }
 var obj1 = {
@@ -294,7 +294,7 @@ var obj1 = {
 }
 var obj2 = {
   fName: "Hari",
-}
+} */
 // var obj3={
 //   fName:"Manthan",
 // }
@@ -307,7 +307,7 @@ console.log(d) */
 
 // Property flags and descriptors
 
-let emp={};
+/* let emp={};
 emp.name="Sunny";
 console.log(Object.getOwnPropertyDescriptor(emp,"name"))
 
@@ -318,4 +318,41 @@ Object.defineProperty(emp,"age",
   configurable:true,// true == attribute can be deleted
   enumerable:true//true== attribute can visible in string or array like places.
 });
-console.log(Object.getOwnPropertyDescriptor(emp,"age"));
+console.log(Object.getOwnPropertyDescriptor(emp,"age")); */
+
+//proto
+
+/* var obj={
+  fName: "Sunny",
+}
+// var obj1 ={
+//   lName: "Jate",
+// }
+
+// obj1. __proto__ = obj;
+// console.log(obj1)
+obj1 = Object.create(obj)
+obj1.lname="Jate"
+
+console.log(obj1) */
+
+//Prototype
+
+/* function Person(name, age) {
+  // let person = Object.create(Person.prototype);//If we use new keyword then there is no need to create object prototype seperately
+  //person.name = name;
+  this.name=name;
+  // person.age = age;
+  this.age = age;
+  // return person;
+}
+Person.prototype.greet= function(){
+    console.log(`Hello ${this.name}`)
+  }
+
+//let user = Person("Sunny",25)
+let user = new Person("Sunny",25)
+user.greet()
+console.log(user)
+
+console.log(Person.prototype) */
