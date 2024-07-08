@@ -358,7 +358,7 @@ console.log(user) */
 // console.log(Person.prototype)
 
 //Class
-class Person{
+/* class Person{
   constructor(name,age){
     this.name=name;
     this.age=age;
@@ -369,4 +369,35 @@ class Person{
 }
 let user = new Person("Hari", 18)
     user.greet()
-    console.log(user)
+    console.log(user) */
+
+//Inheritance
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a noise`);
+  }
+  sing() {
+    console.log(`${this.name} sings a song`);
+  }
+}
+class Dog extends Animal {
+  constructor(name) {
+    super(name); //as we use extends keyword that means here Animal class is parent class of Dog class
+    // so to access the method of parent class in child we need to use super keyword.and the attribute which we have to use.
+  }
+}
+class Cat extends Animal{
+  constructor(name){
+    super(name);
+  }
+}
+let d=new Dog('Max');
+d.speak()
+d.sing()
+let e=new Cat('Kat');
+e.sing();
+e.speak();
