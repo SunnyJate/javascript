@@ -383,6 +383,11 @@ class Animal {
   sing() {
     console.log(`${this.name} sings a song`);
   }
+
+  //static keyword
+  static move(){
+    console.log(`${this.name} is running fast`)
+  }
 }
 class Dog extends Animal {
   constructor(name) {
@@ -398,6 +403,12 @@ class Cat extends Animal{
 let d=new Dog('Max');
 d.speak()
 d.sing()
+Animal.move()//Animal.move(d)//Animal.move(d.name)
+//let d='Max'; Animal.move()
+//As the method is static then we can't access it directly by object. But the class can access it still so the this way is to access the method.
+
 let e=new Cat('Kat');
 e.sing();
 e.speak();
+
+
