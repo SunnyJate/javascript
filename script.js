@@ -373,7 +373,7 @@ let user = new Person("Hari", 18)
 
 //Inheritance
 
-class Animal {
+/* class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -410,5 +410,32 @@ Animal.move()//Animal.move(d)//Animal.move(d.name)
 let e=new Cat('Kat');
 e.sing();
 e.speak();
+*/
 
+/* //Private
 
+class BankAccount {
+  #balance=0;
+  //#==private attribute
+  //it shows that this can only accessible in the class itself not outside
+
+  deposit(amount) {
+    this.#balance += amount;
+    console.log(`Deposit ${amount},new balance is ${this.#balance}`);
+  }
+  withdraw(amount) {
+    if (amount > this.#balance) {
+      console.log(`Insufficient Fund`);
+    } else {
+      this.#balance -= amount;
+      console.log(`Withdraw ${amount}, new balance ${this.#balance}`);
+    }
+  }
+  balance(){
+    console.log(this.#balance)
+  }
+}
+const account = new BankAccount();
+account.deposit(20000);
+account.withdraw(1600);
+account.balance(); */
