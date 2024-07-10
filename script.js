@@ -456,3 +456,76 @@ function div(a,b){
   }//in the catch block the error get catch and the proper error message shown.
 }
 div(10,0) */
+//Fetch Api
+
+
+//Get data "GET API"
+
+/* fetch(`https://jsonplaceholder.typicode.com/posts`)//this the url for fake json data
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`File not found`);
+    }
+    return response.json();
+  })
+  .then(data => data.forEach(element => {
+    console.log(element.title)
+  }))
+  .catch((error) => console.error(error));//by this we can show error as like other errors
+//.catch(error=> console.log(error))//to show error message which we want to send
+//.catch(error=> console.error(`error`))//to show only error */
+
+//to add new "POST API"
+
+/* fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  body: JSON.stringify({
+    title: "foo",
+    body: "bar",
+    userId: 1,
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json)); */
+
+
+  //to update "PUT API"
+
+  /* fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json)); */
+
+  //to do partial modification "PATCH API"
+
+  /* fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    title: 'foo',
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json)); */
+
+
+  //To delete data "DELETE API"
+
+  /* fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+}); */
