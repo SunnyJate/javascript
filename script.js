@@ -439,3 +439,20 @@ const account = new BankAccount();
 account.deposit(20000);
 account.withdraw(1600);
 account.balance(); */
+
+/* //try catch throw
+
+function div(a,b){
+  try{
+    if(b==0){
+      throw new Error("can't divide by 0")
+    }//the throw is used to show the error messages
+    else{
+      console.log(a/b)
+    }
+  }//In try block there is different scenario which are tried which can get leads to error
+  catch(err){
+    console.log(err.message)
+  }//in the catch block the error get catch and the proper error message shown.
+}
+div(10,0) */
