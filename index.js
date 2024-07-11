@@ -42,4 +42,24 @@ console.log(child.children[4])
 console.log(child.children[3]);
 //used to select the child element of the element passed in query */
 
-//previousElementSibling
+/* //previousElementSibling
+// console.log(document.querySelector(`.o07`).previousElementSibling.previousElementSibling)
+//used to select the previous sibling for the selected element
+var sib=document.querySelector(`.o07`)
+console.log(sib.nextElementSibling);
+//used to select the next sibling for the selected element */
+
+/* var sib = document.querySelectorAll(`.DON`);
+sib.forEach((ele)=>console.log(ele.previousElementSibling))
+//to select different siblings for different elements use querySelectorAll */
+
+/* //Append Child
+const ul = document.querySelector('ul');
+const newE = document.createElement('li');
+newE.textContent="Jeson";
+ul.appendChild(newE)
+//to add new element use append */
+
+//remove
+const ul = document.querySelector('li');
+ul.remove();
