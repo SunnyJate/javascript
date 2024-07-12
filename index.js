@@ -60,6 +60,48 @@ newE.textContent="Jeson";
 ul.appendChild(newE)
 //to add new element use append */
 
-//remove
+/* //remove
 const ul = document.querySelector('li');
-ul.remove();
+ul.remove(); */
+
+/* //replaceChild
+const list = document.querySelector('ul');
+const childToChange = list.children[4];
+const newLi = document.createElement('li');
+newLi.textContent='Jimmy'
+list.replaceChild (newLi, childToChange) */
+
+/* //parentNode
+//parentNode and parentElement arr totally similar only some syntactical different 
+//but parent node always give something in output
+//It will never show null
+//parentElement nad parentNode 
+//parentElement
+console.log("Parent Element");
+var parent = document.querySelector("div");
+var p = parent.parentElement;
+console.log(p);
+
+console.log('Parent Node')
+var parent = document.querySelector("div");
+var q = parent.parentNode;//only difference
+console.log(q);*/
+
+
+/* //InnerText and TextContext
+var a = document.querySelector('h1').innerText;
+console.log(a);//By inner text we are not able to read the hidden content
+
+console.log("-----")
+var a = document.querySelector('h1').textContent;
+console.log(a)//to read hidden element neede to use textContent */
+
+/* //beforebegin, afterbegin, afterend, beforeend
+var target = document.querySelector('.Para');
+
+var newE ="<b> It's Me SJ</b>";
+
+// target.insertAdjacentHTML("beforebegin",newE)
+// target.insertAdjacentHTML("afterbegin", newE);
+// target.insertAdjacentHTML("afterend", newE);
+// target.insertAdjacentHTML("beforeend", newE); */
