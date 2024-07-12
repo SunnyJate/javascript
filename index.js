@@ -105,3 +105,14 @@ var newE ="<b> It's Me SJ</b>";
 // target.insertAdjacentHTML("afterbegin", newE);
 // target.insertAdjacentHTML("afterend", newE);
 // target.insertAdjacentHTML("beforeend", newE); */
+
+
+/* //inner html
+let a = document.querySelector('.Hero');
+a.innerHTML = " Captain";
+console.log(a.innerHTML) */
+
+/* //outer HTML
+let a = document.querySelector('.Hero');
+a.outerHTML = " Captain";
+console.log(a.outerHTML) */
