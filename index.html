@@ -1,5 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      width: 400px;
+      height: 400px;
+      background-color: rgba(0, 190, 104, 0.764);
+      border:2px solid #989898;
+      position: relative;
+      border-radius: 10px;
+    }
+    #inside{
+      width: 50px;
+      height: 50px;
+      background-color: #999;
+      border:2px solid black;
+      border-radius: 10px;
+      position: relative;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="inside">
+    </div>
+  </div>
+  <p><button onclick="myMove()">Click</button></p>
+  <script>
+    function myMove(){
+      let pos =0;
+      const elem = document.getElementById("inside");
+      const id=setInterval(frame, 10);
+      function frame(){
+        if(pos ==350){
+          clearInterval(id)
+        }
+        pos++;
+        elem.style.top = pos+ 'px';
+        elem.style.left = pos++ + 'px';
+      }
+    }
+
+  </script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +60,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <!-- <h1>hello</h1> -->
+    <h1>hello</h1>
     <script src="script.js"></script>
 
     <div>
@@ -21,9 +73,10 @@
         <li class="DON">Tony</li>
       </ul>
     </div>
-    <!-- <h1>Hello<span style="display:none"> Friends</span></h1> -->
-    <!-- <div 
-    class="Para" style="background-color: skyblue; border: 5px solid black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum doloremque optio voluptates ratione inventore, repellat perferendis architecto dicta? Totam, placeat. Eaque similique aspernatur distinctio omnis saepe possimus error dignissimos, veritatis nemo optio minima voluptate eligendi veniam at, iure numquam suscipit nihil eius sequi impedit consequatur! Nulla inventore quos nostrum?</div> -->
+    <h1>Hello<span style="display:none"> Friends</span></h1>
+    <div 
+    class="Para" style="background-color: skyblue; border: 5px solid black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum doloremque optio voluptates ratione inventore, repellat perferendis architecto dicta? Totam, placeat. Eaque similique aspernatur distinctio omnis saepe possimus error dignissimos, veritatis nemo optio minima voluptate eligendi veniam at, iure numquam suscipit nihil eius sequi impedit consequatur! Nulla inventore quos nostrum?</div>
     <script src="index.js"></script>
   </body>
-</html>
+</html> -->
+
