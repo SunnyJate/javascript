@@ -115,4 +115,4 @@ console.log(a.innerHTML) */
 /* //outer HTML
 let a = document.querySelector('.Hero');
 a.outerHTML = " Captain";
-console.log(a.outerHTML) */
+console.log(a.outerHTML) */v    
